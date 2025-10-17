@@ -1,3 +1,4 @@
+<style>
 /* --- CSS Variables --- */
 :root {
     --bg-dark-violet: #1b0f3a;
@@ -474,6 +475,9 @@ footer {
     .card-info .btn { display: none; }
 }
 
+</style>
+<script>
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Google Apps Script Configuration ---
@@ -718,4 +722,4 @@ document.addEventListener('DOMContentLoaded', () => {
         incrementView();
     }
 });
-
+</script>
