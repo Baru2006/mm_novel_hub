@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Destiny - MM Novel Hub</title>
+    <!-- Google Fonts: Poppins & Noto Sans Myanmar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-novel-id="cosmic-destiny">
 
+    <header id="main-header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <!-- Inlined SVG Logo -->
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 19.5C4 18.12 5.12 17 6.5 17H20V19.5C20 20.88 18.88 22 17.5 22H6.5C5.12 22 4 20.88 4 19.5Z" fill="url(#grad1)"/>
+                    <path d="M20 4.5C20 3.12 18.88 2 17.5 2H6.5C5.12 2 4 3.12 4 4.5V17H20V4.5Z" fill="url(#grad1)"/>
+                    <path d="M12 17V2C12.7225 3.16833 13.5625 4.195 14.5 5C15.9375 6.38 16.5 8.185 16.5 10C16.5 12.33 15.165 14.415 13.5 15.5C12.835 15.98 12.08 16.355 11.25 16.615L12 17Z" fill="url(#grad2)"/>
+                    <defs>
+                        <linearGradient id="grad1" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FDE047"/>
+                            <stop offset="1" stop-color="#A855F7"/>
+                        </linearGradient>
+                         <linearGradient id="grad2" x1="12" y1="2" x2="16" y2="16" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFFBEB"/>
+                            <stop offset="1" stop-color="#FDE047"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>MM Novel Hub</h1>
+            </a>
+            <div class="menu-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Categories</a>
+                        <div class="dropdown-content">
+                            <a href="#">Novels</a>
+                            <a href="#">Fan Works</a>
+                            <a href="#">Others</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <button class="hamburger" id="hamburger-menu" aria-label="Open Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="novel-detail-page container">
+        <!-- Novel Info Section -->
+        <section class="novel-info-section">
+            <div class="novel-cover-container">
+                <img src="https://placehold.co/300x450/1b0f3a/fde047?text=Cosmic+Destiny" alt="Novel Cover for Cosmic Destiny" class="lazy">
+            </div>
+            <div class="novel-details">
+                <h1 class="novel-title">Cosmic Destiny</h1>
+                <p class="novel-author">by Author Name</p>
+                <div class="novel-tags">
+                    <span class="tag">Fantasy</span>
+                    <span class="tag">Adventure</span>
+                    <span class="tag">Magic</span>
+                    <span class="tag">Cosmic</span>
+                </div>
+                <div class="novel-stats">
+                    <span>👁 Views: <span id="view-count">Loading...</span></span>
+                    <span>❤️ Likes: <span id="like-count">Loading...</span></span>
+                    <span>🔖 Bookmarks: <span id="bookmark-count">Loading...</span></span>
+                </div>
+                <div class="novel-actions">
+                    <button class="action-btn" id="like-btn">❤️ Like</button>
+                    <button class="action-btn" id="bookmark-btn">🔖 Bookmark</button>
+                    <div class="rating-widget">
+                        <span>⭐ Rate:</span>
+                        <div class="stars" id="rating-stars">
+                           <span class="star" data-value="1">☆</span>
+                           <span class="star" data-value="2">☆</span>
+                           <span class="star" data-value="3">☆</span>
+                           <span class="star" data-value="4">☆</span>
+                           <span class="star" data-value="5">☆</span>
+                        </div>
+                        <span id="current-rating">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="novel-summary">
+            <h2>Summary</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
+        <!-- Chapter List -->
+        <section class="chapter-list">
+            <h2>Chapters</h2>
+            <div class="chapter-grid" id="chapter-grid">
+                <!-- Example buttons -->
+                <button class="chapter-btn" data-chapter-type="text" data-chapter="1">Chapter 1: The Awakening</button>
+                <button class="chapter-btn" data-chapter-type="text" data-chapter="2">Chapter 2: Starfall</button>
+                <button class="chapter-btn" data-chapter-type="manga" data-chapter="3">Chapter 3: The Void (Manga)</button>
+                <button class="chapter-btn" data-chapter-type="text" data-chapter="4">Chapter 4: A New Path</button>
+                 <!-- More chapters... -->
+            </div>
+        </section>
+
+        <!-- Inline Chapter Reader -->
+        <section class="chapter-reader" id="chapter-reader-container">
+            <div class="reader-placeholder">
+                <p>Select a chapter to start reading.</p>
+            </div>
+            <div id="reader-content" class="hidden">
+                <!-- Chapter content will be loaded here -->
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MM Novel Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
+
+  
