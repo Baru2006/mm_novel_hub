@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MyanWorld Studio</title>
+    <meta name="description" content="Learn about the mission of MyanWorld Studio.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/100x100/FFD166/0E1116?text=MWS" alt="MyanWorld Studio Logo">
+                <span>MyanWorld Studio</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="novels.html">Novels</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                 <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero about-hero" style="background-image: url('https://images.unsplash.com/photo-1519671482739-6e1b89721c29?auto=format&fit=crop&w=1170&q=80');">
+        </section>
+
+        <section class="container" style="max-width: 800px; text-align: center;">
+            <h1 class="section-title">Sharing Myanmar's Stories</h1>
+            <p style="animation: fadeUp 1s ease-out 0.5s; animation-fill-mode: backwards; font-size: 1.2rem;">
+                MyanWorld Studio was founded on a simple mission:
+            </p>
+            <blockquote style="animation: fadeUp 1s ease-out 1s; animation-fill-mode: backwards; font-size: 1.5rem; margin: 2rem 0; font-style: italic; color: var(--accent-color);">
+                “We translate, create, and share Myanmar stories, folktales, and manga for all readers.”
+            </blockquote>
+            <p style="animation: fadeUp 1s ease-out 1.5s; animation-fill-mode: backwards;">
+                We believe that stories are a bridge between cultures. Our passion is to bring the rich, diverse, and often untold narratives of Myanmar to a global audience. From ancient legends to modern tales, we are dedicated to quality storytelling and beautiful art.
+            </p>
+            <a href="contact.html" class="btn pulse-hover" style="margin-top: 2rem; animation: fadeUp 1s ease-out 2s; animation-fill-mode: backwards;">Get In Touch</a>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 MyanWorld Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+              body.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          body.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'light') themeToggle.checked = true;
+      }
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+</body>
+</html>
+
+                          
