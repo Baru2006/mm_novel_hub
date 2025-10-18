@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MyanWorld Studio</title>
+    <meta name="description" content="Get in touch with the team at MyanWorld Studio.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/100x100/FFD166/0E1116?text=MWS" alt="MyanWorld Studio Logo">
+                <span>MyanWorld Studio</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="novels.html">Novels</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                 <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">Get In Touch</h1>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto;">
+            We'd love to hear from you! Whether you're a reader with feedback, an artist looking to collaborate, or just want to say hello, here's how you can reach us.
+        </p>
+
+        <div class="contact-grid">
+            <!-- Email -->
+            <div class="contact-card" style="animation-delay: 0.1s;">
+                <i class="fas fa-envelope icon"></i>
+                <h3>Email</h3>
+                <p>For general inquiries and support.</p>
+                <a href="mailto:hello@myanworld.studio">hello@myanworld.studio</a>
+            </div>
+            <!-- Telegram -->
+            <div class="contact-card" style="animation-delay: 0.2s;">
+                <i class="fab fa-telegram icon"></i>
+                <h3>Telegram</h3>
+                <p>Join our community channel.</p>
+                <a href="#">@MyanWorldStudio</a>
+            </div>
+            <!-- GitHub -->
+            <div class="contact-card" style="animation-delay: 0.3s;">
+                <i class="fab fa-github icon"></i>
+                <h3>GitHub</h3>
+                <p>Check out our open source projects.</p>
+                <a href="#">github.com/myanworld</a>
+            </div>
+             <!-- TikTok -->
+            <div class="contact-card" style="animation-delay: 0.4s;">
+                <i class="fab fa-tiktok icon"></i>
+                <h3>TikTok</h3>
+                <p>Follow us for short clips and art.</p>
+                <a href="#">@myanworld.studio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 MyanWorld Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+              body.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          body.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'light') themeToggle.checked = true;
+      }
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+</body>
+</html>
+
+              
