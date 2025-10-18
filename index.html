@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyanWorld Studio - Discover Myanmar Stories & Manga</title>
+    <meta name="description" content="Explore a world of captivating novels, manga, and stories from Myanmar, created and shared by MyanWorld Studio.">
+    <!-- SEO / Open Graph Tags -->
+    <meta property="og:title" content="MyanWorld Studio">
+    <meta property="og:description" content="Discover Myanmar Stories & Manga.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+    <meta property="og:url" content="https://your-github-username.github.io/myanworld-studio/">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/100x100/FFD166/0E1116?text=MWS" alt="MyanWorld Studio Logo">
+                <span>MyanWorld Studio</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="novels.html">Novels</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1170&q=80');">
+            <div class="hero-content">
+                <h1>Discover Myanmar Stories & Manga</h1>
+                <p>Your portal to captivating tales and stunning art.</p>
+            </div>
+        </section>
+
+        <!-- Featured Works Section -->
+        <section class="container">
+            <h2 class="section-title">Featured Works</h2>
+            <div class="works-grid">
+                <!-- Card 1 -->
+                <a href="novel-reader.html" class="work-card">
+                    <img src="https://placehold.co/600x400/FF6B6B/FFFFFF?text=Novel+Cover" alt="Novel Cover">
+                    <div class="work-card-content">
+                        <h3>The Last Bagan King</h3>
+                        <div class="work-meta">
+                            <span><i class="fas fa-eye"></i> 1.2M Views</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 2 -->
+                <a href="manga-reader.html" class="work-card">
+                    <img src="https://placehold.co/600x400/4ECDC4/FFFFFF?text=Manga+Art" alt="Manga Art">
+                    <div class="work-card-content">
+                        <h3>Yangon Cyberpunk</h3>
+                        <div class="work-meta">
+                            <span><i class="fas fa-eye"></i> 890K Views</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Card 3 -->
+                <a href="novel-reader.html" class="work-card">
+                    <img src="https://placehold.co/600x400/FFD166/000000?text=Novel+Cover" alt="Novel Cover">
+                    <div class="work-card-content">
+                        <h3>Irrawaddy Spirit</h3>
+                        <div class="work-meta">
+                            <span><i class="fas fa-eye"></i> 2.5M Views</span>
+                            <span><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 MyanWorld Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Pure CSS theme toggle logic - this script ensures theme persistence
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+              body.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+
+      // Check for saved theme in localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          body.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'light') {
+              themeToggle.checked = true;
+          }
+      }
+
+      // Hamburger menu toggle
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+    </script>
+</body>
+</html>
+
+              
