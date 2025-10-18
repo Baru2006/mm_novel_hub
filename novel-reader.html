@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Bagan King - MyanWorld Studio</title>
+    <meta name="description" content="Read Chapter 1 of The Last Bagan King, a historical epic.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Reader Header -->
+    <header class="main-header reader-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/100x100/FFD166/0E1116?text=MWS" alt="MyanWorld Studio Logo">
+                <span>MyanWorld Studio</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="novels.html">Novels</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="title-banner" style="background-image: url('https://images.unsplash.com/photo-1596205254252-f0f15779c134?auto=format&fit=crop&w=1170&q=80');">
+            <div class="title-banner-content">
+                <h1>The Last Bagan King</h1>
+                <p>By Aung Myo</p>
+            </div>
+        </section>
+
+        <section class="reader-meta">
+            <span><i class="fas fa-eye"></i> 1.2M Views</span>
+            <span><i class="fas fa-star"></i> 4.9 Rating</span>
+            <span><i class="fas fa-bookmark"></i> Bookmark</span>
+        </section>
+
+        <article class="story-content container">
+            <h2>Chapter 1: The Crimson Sunset</h2>
+            <p>The dust of the plains settled as the sun bled across the horizon, painting the thousand pagodas of Bagan in hues of crimson and gold. General Kyaw Htin stood on the battlements of the city wall, his gaze fixed on the endless expanse where the enemy hordes were gathering like a storm cloud. The air was thick with tension, a silent prelude to the symphony of war that was to come.</p>
+            <p>He tightened his grip on the hilt of his dha, the cold steel a familiar comfort against his calloused palm. For generations, his family had guarded this sacred city, a jewel of the empire. Now, it fell to him to defend it against the greatest threat it had ever faced. The whispers of the court spoke of betrayal, of a kingdom weakened from within. But here, on the walls, there was only duty.</p>
+            <p>"They are preparing for the first wave," a young captain said, his voice barely a whisper. Kyaw Htin nodded, not taking his eyes off the enemy camp. The horns would sound soon. The drums of war would beat. And Bagan would answer.</p>
+             <p>This is placeholder text. The story continues, weaving a tale of heroism, sacrifice, and the final, glorious days of an ancient empire. Each paragraph is designed to draw the reader deeper into the world, with cinematic descriptions and rich character development that MyanWorld Studio is known for. The formatting ensures a comfortable and immersive reading experience on any device.</p>
+        </article>
+
+        <nav class="chapter-nav container">
+            <a href="#" class="btn">Chapter 1</a>
+            <a href="#" class="btn">Chapter 2</a>
+            <a href="#" class="btn">Chapter 3</a>
+        </nav>
+
+        <section class="container">
+            <h2 class="section-title">Illustration Gallery</h2>
+            <div class="illustration-gallery">
+                <img src="https://placehold.co/600x400/e63946/ffffff?text=Scene+1" alt="Illustration 1">
+                <img src="https://placehold.co/600x400/f1faee/1d3557?text=Character" alt="Illustration 2">
+                <img src="https://placehold.co/600x400/a8dadc/1d3557?text=Battle" alt="Illustration 3">
+                <img src="https://placehold.co/600x400/457b9d/f1faee?text=Map" alt="Illustration 4">
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 MyanWorld Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+              body.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          body.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'light') themeToggle.checked = true;
+      }
+    </script>
+</body>
+</html>
+
