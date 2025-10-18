@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novels - MyanWorld Studio</title>
+    <meta name="description" content="Browse our collection of original and translated novels from Myanmar.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/100x100/FFD166/0E1116?text=MWS" alt="MyanWorld Studio Logo">
+                <span>MyanWorld Studio</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="novels.html" class="active">Novels</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                 <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> <span>›</span> Novels
+        </div>
+        <h1 class="section-title">Our Novel Collection</h1>
+
+        <div class="works-grid">
+            <!-- Novel 1 -->
+            <div class="work-card" style="animation-delay: 0.1s;">
+                <img src="https://placehold.co/600x400/e63946/ffffff?text=Historical" alt="Novel Cover 1">
+                <div class="work-card-content">
+                    <h3>The Last Bagan King</h3>
+                    <p>A tale of courage and loss during the fall of an empire.</p>
+                    <a href="novel-reader.html" class="btn pulse-hover" style="margin-top: 1rem;">Read Now</a>
+                </div>
+            </div>
+            <!-- Novel 2 -->
+            <div class="work-card" style="animation-delay: 0.2s;">
+                <img src="https://placehold.co/600x400/f1faee/1d3557?text=Fantasy" alt="Novel Cover 2">
+                <div class="work-card-content">
+                    <h3>Irrawaddy Spirit</h3>
+                    <p>A mystical journey along Myanmar's most sacred river.</p>
+                     <a href="novel-reader.html" class="btn pulse-hover" style="margin-top: 1rem;">Read Now</a>
+                </div>
+            </div>
+            <!-- Novel 3 -->
+            <div class="work-card" style="animation-delay: 0.3s;">
+                <img src="https://placehold.co/600x400/a8dadc/1d3557?text=Romance" alt="Novel Cover 3">
+                <div class="work-card-content">
+                    <h3>Mandalay Sunset</h3>
+                    <p>A heartwarming love story set in the royal capital.</p>
+                     <a href="novel-reader.html" class="btn pulse-hover" style="margin-top: 1rem;">Read Now</a>
+                </div>
+            </div>
+             <!-- Novel 4 -->
+            <div class="work-card" style="animation-delay: 0.4s;">
+                <img src="https://placehold.co/600x400/457b9d/f1faee?text=Mystery" alt="Novel Cover 4">
+                <div class="work-card-content">
+                    <h3>Secrets of Inle Lake</h3>
+                    <p>A detective uncovers a conspiracy in the floating villages.</p>
+                     <a href="novel-reader.html" class="btn pulse-hover" style="margin-top: 1rem;">Read Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 MyanWorld Studio. All Rights Reserved.</p>
+    </footer>
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+              body.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          body.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'light') themeToggle.checked = true;
+      }
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    </script>
+</body>
+</html>
+
+                          
