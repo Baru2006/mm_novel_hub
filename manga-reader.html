@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yangon Cyberpunk - MyanWorld Studio</title>
+    <meta name="description" content="Read Chapter 1 of Yangon Cyberpunk, a sci-fi action manga.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+    <!-- Reader Header -->
+    <header class="main-header reader-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="https://placehold.co/100x100/FFD166/0E1116?text=MWS" alt="MyanWorld Studio Logo">
+                <span>Yangon Cyberpunk - Ch. 1</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="manga.html">Manga List</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="theme-toggle">
+                        <input type="checkbox" id="theme-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="manga-reader-container">
+            <!-- Manga Pages -->
+            <img src="https://placehold.co/800x1200/000000/FFFFFF?text=Page+1" alt="Manga Page 1">
+            <img src="https://placehold.co/800x1200/000000/FFFFFF?text=Page+2" alt="Manga Page 2">
+            <img src="https://placehold.co/800x1200/000000/FFFFFF?text=Page+3" alt="Manga Page 3">
+            <img src="https://placehold.co/800x1200/000000/FFFFFF?text=Page+4" alt="Manga Page 4">
+            <img src="https://placehold.co/800x1200/000000/FFFFFF?text=Page+5" alt="Manga Page 5">
+        </div>
+        
+        <nav class="chapter-nav container">
+            <a href="#" class="btn">‹ Previous</a>
+            <a href="#" class="btn">Next ›</a>
+        </nav>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 MyanWorld Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+      themeToggle.addEventListener('change', () => {
+          if (themeToggle.checked) {
+              body.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+          } else {
+              body.setAttribute('data-theme', 'dark');
+              localStorage.setItem('theme', 'dark');
+          }
+      });
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+          body.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'light') themeToggle.checked = true;
+      }
+    </script>
+</body>
+</html>
+
+  
